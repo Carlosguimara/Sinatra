@@ -1,0 +1,5 @@
+gem install bundler
+bundle install
+gem install rack
+rackup -p 8080
+

@@ -4,7 +4,7 @@ require 'json'
 set :app_file, __FILE__
 
 # Configuração do CORS
-set :allow_origin, "http://example.com http://anotherdomain.com"
+set :allow_origin, "*"
 set :allow_methods, "GET,HEAD,POST,OPTIONS,PUT,PATCH,DELETE"
 set :allow_headers, "content-type,if-modified-since"
 set :expose_headers, "location,link"

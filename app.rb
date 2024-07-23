@@ -1,6 +1,16 @@
 require 'sinatra'
 require 'json'
 
+set :app_file, __FILE__
+
+# Configuração do CORS
+set :allow_origin, "http://example.com http://anotherdomain.com"
+set :allow_methods, "GET,HEAD,POST,OPTIONS,PUT,PATCH,DELETE"
+set :allow_headers, "content-type,if-modified-since"
+set :expose_headers, "location,link"
+set :max_age, 3600
+set :allow_credentials, true
+
 # Dados estáticos para exemplo
 PRODUCTS = [
   { name: "Produto 1", price: 100, image: "image1.jpg", on_sale: true },
@@ -26,4 +36,4 @@ get '/info' do
   SHOP_INFO.to_json
 end
 
-run! if app_file == $0
+run! if __FILE__ == $0

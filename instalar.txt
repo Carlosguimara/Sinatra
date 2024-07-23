@@ -1,5 +1,6 @@
 gem install bundler
 bundle install
 gem install rack
+rackup config.ru
 rackup -p 8080
 
